@@ -1,0 +1,151 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.906), rgba(250, 250, 250, 0.834)), url(./img/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+}
+
+/* Fonts ----------------------------------------------------------------------------------------------*/ 
+@font-face {
+    font-family: 'Regio Mono Regular';
+    src: 
+        url('./font/RegioMono-Regular.otf') format('otf'); 
+    font-weight: 50;
+    font-style: normal;
+
+    font-family: 'Regio Mono Bold';
+    src: 
+        url('./font/RegioMono-Bold.otf') format('otf'); 
+    font-weight: 100;
+    font-style: normal;
+    
+}
+
+body {
+    font-family: Regio Mono;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Navigation ----------------------------------------------------------------------------------------------*/ 
+.off-screen-menu {
+    background-color: rgb(226, 89, 133);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    left: -450px;
+}
+
+.off-screen-menu.active {
+    left: 0
+}
+
+nav{
+    display: flex;
+    padding: 1rem;
+    background-color: #fff ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    align-items: center;
+    width: 40px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    padding-right: 60px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 1.5eem;
+    margin-bottom: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: rgb(226, 89, 133);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    background: rgb(226, 89, 133);
+    color: #fff;
+    font-family: Regio Mono;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Search ----------------------------------------------------------------------------------------------*/ 
+.search-bar {
+    width: 100%;
+    background: rgba(226, 89, 132, 0.042);
+    display: flex;
+    border-radius: 60px;   
+    padding: 8px 8px; 
+}
+
+.search-bar input {
+    font-family: Regio Mono;
+    font-size: medium;
+    flex: 1;
+    border: 0;
+    border-radius: 60px;
+    outline: none;
+    padding: 8px 20px;
+    font-size: 20px;
+    color: rgb(226, 89, 133);
+}
+
+::placeholder {
+    color: #bbbaba;
+    font-family: Regio Mono;
+    font-size:medium;
+}
+.search-bar button img {
+    width: 25px;
+}
+
+.search-bar button {
+    margin-left: 8px;
+    border: 0;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background:rgb(226, 89, 133);
+    cursor: pointer;
+}
+
+/* Content ----------------------------------------------------------------------------------------------*/ 
+.content {
+    margin-top: 14%;
+    color: #000000;
+    max-width: 620px;
+}
+
+.content h1 {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 85px;
+    margin-bottom: 25px;
+}
+
