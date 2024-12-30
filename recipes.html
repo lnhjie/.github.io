@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Navigation -->
+    <nav>
+        <img src="./img/logo pink.png" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="recipes.html">Recipes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="btn"><a href="login.html">Log In</a></li>
+    </nav> 
+    <div>
+    <form action="" class="search-bar">
+        <input type="text" placeholder="Start searching..." name="q">
+        <button type="submit" class="search-btn">
+            <!-- Default Pink Icon -->
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#e25985" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+            </svg>
+            <!-- White Icon for Hover -->
+            <svg class="white-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="display: none;">
+                <path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+            </svg>
+        </button>
+    </form>
+    </div>
+    <!-- Header -->
+     <div class="recipes-header">
+        <h2>Explore our collection of</h2>
+        <h1>RECIPES</h1>
+    </div>
+<!-- Recipe Cards Section -->
+<div class="recipe-rows">
+    <!-- Row 1 -->
+    <div class="recipe-row">
+        <div class="recipe-card">
+            <a href="beefwellington.html" class="recipe-link">
+                <div class="image-container">
+                    <img src="./img/beef wellington.jpg" alt="Beef Wellington">
+                    <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                </div>
+                <div class="recipe-details">
+                    <h2 class="recipe-title">Beef Wellington</h2>
+                    <p class="recipe-duration">⏱️ 90 minutes</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Meat</span>
+                        <span class="tag">Christmas</span>
+                </div>
+                </div>
+            </a>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="recipe-row">
+        <div class="recipe-card">
+            <a href="beefwellington.html" class="recipe-link">
+                <div class="image-container">
+                    <img src="./img/beef wellington.jpg" alt="Beef Wellington">
+                    <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                </div>
+                <div class="recipe-details">
+                    <h2 class="recipe-title">Beef Wellington</h2>
+                    <p class="recipe-duration">⏱️ 90 minutes</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Meat</span>
+                        <span class="tag">Christmas</span>
+                </div>
+                </div>
+            </a>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+    </div>   
+    <!-- Row 3 -->
+    <div class="recipe-row">
+        <div class="recipe-card">
+            <a href="beefwellington.html" class="recipe-link">
+                <div class="image-container">
+                    <img src="./img/beef wellington.jpg" alt="Beef Wellington">
+                    <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                </div>
+                <div class="recipe-details">
+                    <h2 class="recipe-title">Beef Wellington</h2>
+                    <p class="recipe-duration">⏱️ 90 minutes</p>
+                    <div class="recipe-tags">
+                        <span class="tag">Meat</span>
+                        <span class="tag">Christmas</span>
+                </div>
+                </div>
+            </a>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <div class="image-container">
+                <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+            <div class="recipe-details">
+                <h2 class="recipe-title">Shrimp Burger</h2>
+                <p class="recipe-duration">⏱️ 60 minutes</p>
+                <div class="recipe-tags">
+                    <span class="tag">Seafood</span>
+                    <span class="tag">Burger</span>
+            </div>
+            </div>
+        </div>
+    </div>         
+</div>
+    <!-- Footer -->
+    <div img src="./img/ramen bottom.png" class="footer-img"></div>
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="terms.html">Terms of Use</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookies</a>
+            <span>© 2024 Mush Rooms</span>
+        </div>
+    </footer>
+    </div>                
+<script scr="script.js"></script>
+</body>
+</html>
