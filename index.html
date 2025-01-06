@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking recipes</title>
+    <title>Home  | Yummy Recipes</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
     <!-- Navigation -->
     <nav>
-        <img src="./img/logo pink.png" class="logo">
+        <a href="index.html">
+            <img src="./img/logo pink.png" class="logo">
+        </a>
         <ul>
-            <li class="active"><a href="index.html">Home</a></li>
             <li><a href="recipes.html">Recipes</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li class="btn"><a href="login.html">Log In</a></li>
+            <li class="btn"><a href="login.html">Sign In</a></li>
     </nav> 
     <div>
 <form action="" class="search-bar">
@@ -35,21 +37,23 @@
     </div>
     <!-- Hero -->
     <div class="content">
-        <div class="hero-text">
-        <h1><b>YUMMY RECIPES!</b></h1>
-        <h2>Transform your everyday cooking into <br> extraordinary dining experiences 
-            with our <br> curated collection of delectable recipes. 
-            <br> Delight your family and 
-            friends with your <br> refined culinary skills — 
-            explore our recipes <br> and elevate 
-                your meals today!</h2>   
-        </div>      
-    </div>
-    <div class="ramen-hero">
-        <img src="./img/ramen hero.png">
-    </div>
-    <div class="burger-hero">
-        <img src="./img/burger hero.png">
+        <div class="top-wrapper">
+            <div class="hero-text">
+                <h1><b>YUMMY RECIPES!</b></h1>
+                <h2>Transform your everyday cooking into <br> extraordinary dining experiences 
+                    with our <br> curated collection of delectable recipes. 
+                    <br> Delight your family and 
+                    friends with your <br> refined culinary skills — 
+                    explore our recipes <br> and elevate 
+                        your meals today!</h2>   
+            </div>      
+
+            <!-- <div> -->
+                <img src="./img/ramen hero.png">
+                <img src="./img/burger hero.png">
+            <!-- </div> -->
+
+        </div>
     </div>
     <!-- Popular this week -->
     <div class="popular">
@@ -149,6 +153,148 @@
             </div>
         </div>
     </div>
+    <div class="editors-pick-card">
+    <!-- Description Section -->
+    <div class="description-section">
+        <h4 class="recipe-name">Truffel Pasta</h4>
+        <h1 class="editors-title">Editor's Pick of the Day</h1>
+        <p class="recipe-description">
+            Dive into this flavorful Shrimp Burger recipe, perfectly seasoned and paired with a tangy sauce. A must-try for seafood lovers!
+        </p>
+        <button class="cta-button">
+            Get the Recipe <span>→</span>
+        </button>
+    </div>
+    <!-- Recipe Card Section -->
+    <div class="recipe-card-large">
+        <div class="image-container">
+            <img src="./img/" alt="Truffel Pasta">
+            <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+    </div>
+    </div>
+    <!-- Community Favorites -->
+    <div class="popular">
+        <h1>COMMUNITY FAVORITES</h1>
+        <div class="slider-container">
+            <div class="card-slider">
+                <!-- Recipe Card 7 -->
+                <a href="beefwellington.html" class="recipe-card">
+                    <div class="image-container">
+                        <img src="./img/beef wellington.jpg" alt="Beef Wellington">
+                        <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    </div>
+                    <div class="recipe-details">
+                        <h2 class="recipe-title">Beef Wellington</h2>
+                        <p class="recipe-duration">⏱️ 90 minutes</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Meat</span>
+                            <span class="tag">Christmas</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Recipe Card 8 -->
+                <div class="recipe-card">
+                    <div class="image-container">
+                        <img src="./img/shrimp burger.jpg" alt="Shrimp Burger">
+                        <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    </div>
+                    <div class="recipe-details">
+                        <h2 class="recipe-title">Shrimp Burger</h2>
+                        <p class="recipe-duration">⏱️ 60 minutes</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Seafood</span>
+                            <span class="tag">Burger</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Recipe Card 9 -->
+                <div class="recipe-card">
+                    <div class="image-container">
+                        <img src="./img/matcha cheesecake.webp" alt="Matcha cheesecake">
+                        <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    </div>
+                    <div class="recipe-details">
+                        <h2 class="recipe-title">Matcha Cheesecake</h2>
+                        <p class="recipe-duration">⏱️ 30 minutes</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Matcha</span>
+                            <span class="tag">Cakes</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Recipe Card 10 -->
+                <div class="recipe-card">
+                    <div class="image-container">
+                        <img src="./img/matcha cheesecake.webp" alt="Matcha cheesecake">
+                        <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    </div>
+                    <div class="recipe-details">
+                        <h2 class="recipe-title">Matcha Cheesecake</h2>
+                        <p class="recipe-duration">⏱️ 30 minutes</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Matcha</span>
+                            <span class="tag">Cakes</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Recipe Card 11 -->
+                <div class="recipe-card">
+                    <div class="image-container">
+                        <img src="./img/matcha cheesecake.webp" alt="Matcha cheesecake">
+                        <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    </div>
+                    <div class="recipe-details">
+                        <h2 class="recipe-title">Matcha Cheesecake</h2>
+                        <p class="recipe-duration">⏱️ 30 minutes</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Matcha</span>
+                            <span class="tag">Cakes</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Recipe Card 12 -->
+                <div class="recipe-card">
+                    <div class="image-container">
+                        <img src="./img/matcha cheesecake.webp" alt="Matcha cheesecake">
+                        <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+                    </div>
+                    <div class="recipe-details">
+                        <h2 class="recipe-title">Matcha Cheesecake</h2>
+                        <p class="recipe-duration">⏱️ 30 minutes</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Matcha</span>
+                            <span class="tag">Cakes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- Newsletter -->
+    <div class="newsletter-card">
+        <div class="image-section">
+            <img src="newsletter-image.jpg" alt="Newsletter Image">
+        </div>
+        <div class="content-section">
+            <h2>Join Our Newsletter</h2>
+            <p>Stay updated with our latest recipes, tips, and news! Subscribe to our newsletter and never miss a thing.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="social-links">
+                <p>Follow us on:</p>
+                <ul>
+                    <li><a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.pinterest.com" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
     <div img src="./img/ramen bottom.png" class="footer-img"></div>
     <footer class="footer">
@@ -156,12 +302,10 @@
             <a href="terms.html">Terms of Use</a>
             <a href="privacy.html">Privacy Policy</a>
             <a href="cookies.html">Cookies</a>
-            <span>© 2024 Mush Rooms</span>
+            <span>© 2025 Mush Rooms</span>
         </div>
     </footer>
 </div>      
 <script scr="script.js"></script>
 </body>
 </html>
-
-

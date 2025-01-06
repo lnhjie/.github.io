@@ -3,23 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking recipes</title>
+    <title>Contact Page | Yummy Recipes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
     <!-- Navigation -->
     <nav>
-        <img src="./img/logo pink.png" class="logo">
+        <a href="index.html">
+            <img src="./img/logo pink.png" class="logo">
+        </a>
         <ul>
-            <li><a href="index.html">Home</a></li>
             <li><a href="recipes.html">Recipes</a></li>
             <li><a href="about.html">About</a></li>
             <li class="active"><a href="contact.html">Contact</a></li>
-            <li class="btn"><a href="login.html">Log In</a></li>
+            <li class="btn"><a href="login.html">Sign In</a></li>
     </nav> 
     <div>
-</div>      
+</div>
+    <!-- Form -->
+    <main>
+        <section class="contact-section">
+            <h1>Want to Know More? Contact Us!</h1>
+            <h2>We’d love to hear from you! Share your feedback, recipe suggestions, or just say hello.</h2>
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+                
+                <label for="email">Subject*</label>
+                <input type="text" id="subject" name="subject" placeholder="Write the subject here..." required>
+
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+                
+                <label for="attachment">Attachments (optional)</label>
+                <input type="file" id="attachment" name="attachment" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <p>Any information you choose to give us will be used to process your query and safeguarded in accordance with our Privacy Policy. By submitting this form you agree to our Terms of Use.</p>
+        </section>
+    </main>
+    <!-- Footer -->
+    <div img src="./img/ramen bottom.png" class="footer-img"></div>
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="terms.html">Terms of Use</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookies</a>
+            <span>© 2025 Mush Rooms</span>
+        </div>
+    </footer>
 <script scr="script.js"></script>
 </body>
 </html>

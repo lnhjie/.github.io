@@ -89,7 +89,14 @@ nav ul li.btn:hover a {
     border: 2px solid rgb(226, 89, 133);
     background-color: rgb(226, 89, 133);
     color: #fff;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+}
+
+nav ul li.btn.active a {
+    border: 2px solid rgb(226, 89, 133);
+    background-color: rgb(226, 89, 133); 
+    color: #fff;
+    transition: all 0.5s ease;
 }
 
 /* Search ----------------------------------------------------------------------------------------------*/ 
@@ -102,7 +109,7 @@ nav ul li.btn:hover a {
 }
 
 .search-bar input {
-    font-family: Regio Mono;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: medium;
     flex: 1;
     border: 0;
@@ -115,7 +122,7 @@ nav ul li.btn:hover a {
 
 ::placeholder {
     color: #bbbaba;
-    font-family: Regio Mono;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: medium;
 }
 
@@ -145,9 +152,9 @@ nav ul li.btn:hover a {
 
 /* Hero ----------------------------------------------------------------------------------------------*/ 
 .content {
-    margin-top: 14%;
+    margin-top: 104px;
+    margin-bottom: 20vh;
     color: rgb(208, 79, 120);
-    max-width: 620px;
 }
 
 .content h1 {
@@ -165,32 +172,140 @@ nav ul li.btn:hover a {
     margin-bottom: 24px;
 }
 
-.content ramen-hero {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    bottom: 0;
-    right: 0;
-    text-align: right;
+.hero-text {
+    width: auto;
 }
 
-.ramen-hero img {
-    width: 50%;
-    height: 50%;
+.top-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.content burger-hero {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    bottom: 0;
-    right: 0;
-    text-align: right;
+.top-wrapper img {
+    width: 400px;
+    height: 350px;
 }
 
-.burger-hero img {
-    width: 50%;
-    height: 50%;
+.top-wrapper img:hover {
+    transform: rotate(10deg);
+    transition: 0.3s ease;
+}
+
+/* Newsletter ----------------------------------------------------------------------------------------------*/ 
+.newsletter-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.image-section {
+    background-color: #fff;
+    border-radius: 24px;
+    flex: 1;
+    max-width: calc(50% - 0.5rem);
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.content-section {
+    background-color: #fff;
+    border-radius: 24px;
+    flex: 1;
+    width: calc(50% - 0.5rem);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    color: #e25985;
+    margin-bottom: 0.5rem;
+}
+
+.content-section p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #e25985;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-family: 'Regio Mono', monospace;
+}
+
+.newsletter-form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 24px;
+    background-color: #e25985;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Regio Mono', monospace;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: rgb(208, 79, 120);
+}
+
+.social-links p {
+    margin: 1rem 0 0.5rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.social-links ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li {
+    display: inline-block;
+}
+
+.social-links ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(226, 89, 133);
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links ul li a:hover {
+    background-color: rgb(208, 79, 120);
+    transform: scale(1.1);
 }
 
 /* Recipe Card ----------------------------------------------------------------------------------------------*/ 
@@ -203,9 +318,12 @@ nav ul li.btn:hover a {
 
 .slider-container {
     position: relative;
+    height: auto;
     width: 100%;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     margin-bottom: 40px;
+    padding-top: 20px;
 }
 
 .card-slider {
@@ -231,9 +349,9 @@ nav ul li.btn:hover a {
 }
 
 .recipe-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     cursor: pointer;
-    transition: 1s ease;
+    transition: 0.3 ease;
 }
 
 .recipe-card img {
@@ -241,13 +359,13 @@ nav ul li.btn:hover a {
     height: 400px;
     object-fit: cover;
     border-radius: 16px;
-    transition: 1s ease;
+    transition: 0.3s ease;
 }
 
 .recipe-card img:hover {
     border-radius: 16px;
-    transform: scale(1.15);
-    transition: 1s ease;
+    transform: scale(1.05);
+    transition: 0.3s ease;
 }
 
 .recipe-title {
@@ -294,9 +412,9 @@ nav ul li.btn:hover a {
 }
 
 .image-container:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     cursor: pointer;
-    transition: 1s ease;
+    transition: 0.3s ease;
 }
 
 .image-container img {
@@ -329,6 +447,115 @@ nav ul li.btn:hover a {
     color: #ffffff;
 }
 
+/* Editor's Pick of the Day Card ----------------------------------------------------------------------------------------------*/ 
+.editors-pick-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.recipe-card-large {
+    flex: 1;
+    max-width: 600px;
+}
+
+.recipe-card-large .image-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Larger height for emphasis */
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.recipe-card-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.recipe-card-large .favorite-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #ffffff;
+    color: rgb(208, 79, 120);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-card-large .favorite-btn:hover {
+    background-color: rgb(208, 79, 120);
+    color: #ffffff;
+}
+
+.description-section {
+    height: 400px;
+    max-width: 400px;
+    padding: 2rem;
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description-section .recipe-name {
+    font-family: 'Regio Mono', monospace;
+    font-size: 1.2rem;
+    color: rgb(208, 79, 120);
+    margin-bottom: 0.5rem;
+}
+
+.description-section .editors-title {
+    font-family: 'Regio Mono', monospace;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.description-section .recipe-description {
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.description-section .cta-button {
+    background-color: rgb(226, 89, 133);
+    color: white;
+    font-family: 'Regio Mono', monospace;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.description-section .cta-button:hover {
+    background-color: rgb(208, 79, 120);
+}
+
+.description-section .cta-button span {
+    font-size: 1.2rem;
+}
+
 /* Footer ----------------------------------------------------------------------------------------------*/ 
 .footer {
     background-color:rgba(208, 79, 120, 0); 
@@ -356,13 +583,17 @@ nav ul li.btn:hover a {
     margin-bottom: 40px;
     color: #a0a0a0;
 }
+.footer-img {
+    width: 40px;
+    margin: 8px;
+}
 /* Recipe Page ----------------------------------------------------------------------------------------------*/
 .recipes-header {
     border-radius: 24px;
     text-align: center;
     padding: 20px;
-    margin-top: 24px;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 56px;
 }
 .recipes-header h1 {
     font-size: 48px;
@@ -388,6 +619,7 @@ nav ul li.btn:hover a {
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
     gap: 8px;
+    margin-bottom: 40px;
 }
 
 /* Beef Wellington Page ----------------------------------------------------------------------------------------------*/
@@ -403,4 +635,269 @@ nav ul li.btn:hover a {
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
+}
+
+/* About Page ----------------------------------------------------------------------------------------------*/
+.about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.about h1, .about h2 {
+    color: #333333;
+}
+
+.about p {
+    margin-bottom: 1rem;
+    color: #555555;
+}
+
+.about ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #555555;
+}
+
+.about a {
+    color: #e25985;
+    text-decoration: none;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: inline-block; 
+    margin-left: 10px;
+}
+
+.social-links ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 8px;
+    margin: 8px;
+    gap: 16px;
+}
+
+.social-links ul li {
+    display: inline-block;
+}
+
+.social-links ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgb(226, 89, 133);
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links ul li a:hover {
+    background-color: rgb(208, 79, 120);
+    transform: scale(1.1);
+}
+
+.social-links ul li a i {
+    line-height: 32px;
+}
+
+/* Contact Page ----------------------------------------------------------------------------------------------*/
+.contact-section {
+    background-color: #ffffff5e;
+    border: 0.5px solid rgb(226, 89, 133);
+    border-radius: 8px;
+    color: rgb(226, 89, 133);
+    max-width: 600px;
+    margin: 4rem auto 32rem auto;
+    text-align: left;
+    padding: 2rem;
+}
+
+.contact-section h1 {
+    margin-bottom: 1rem;
+    font-size: 32px;
+    color: rgb(226, 89, 133);
+}
+
+.contact-section h2 {
+    margin-bottom: 4rem;
+    font-weight: 400;
+    font-size: 18px;
+    color: #666;
+}
+
+.contact-section p {
+    margin-top: 2rem;
+    margin-bottom: 40px;
+    font-size: 13px;
+    color: #666;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.contact-form label {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 32px;
+    padding: 0.75rem;
+    border: 0.5px solid rgb(226, 89, 133);
+    border-radius: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form label[for="attachment"] {
+    display: inline-block;
+    background-color: #fff;
+    border: 0.5px solid rgb(226, 89, 133);
+    padding: 0.75rem;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 32px;
+}
+
+.contact-form label[for="attachment"]:hover {
+    background-color:  rgba(226, 89, 132, 0.5);
+    color: #fff;
+}
+
+.contact-form input[type="file"] {
+    display: none;
+}
+
+.submit-btn {
+    background-color: rgb(226, 89, 133);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: "Regio Mono", monospace; /* Make sure this font is loaded */
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgb(208, 79, 120);
+}
+
+/* Sign In Page ----------------------------------------------------------------------------------------------*/
+.sign-in-container {
+    margin: 4rem auto 32rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border: 0.5px solid rgb(226, 89, 133);
+    background: #ffffff5e;
+    border-radius: 8px;
+}
+
+.form-box {
+    color: rgb(226, 89, 133);
+    width: 100%;
+    text-align: left;
+}
+
+.form-box h1 {
+    font-size: 32px;
+    color: rgb(226, 89, 133);
+    margin-bottom: 1rem;
+}
+
+.form-box h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.form-box p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.sign-in-form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.sign-in-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 32px;
+    border: 0.5px solid rgb(226, 89, 133);
+    border-radius: 16px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sign-in-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgb(226, 89, 133);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Regio Mono", monospace; /* Make sure this font is loaded */
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: rgb(208, 79, 120);
+}
+
+.form-footer {
+    margin-top: 1.5rem;
+}
+
+.form-footer a {
+    color: rgb(226, 89, 133);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.form-legal {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    margin-top: 1rem;
 }
