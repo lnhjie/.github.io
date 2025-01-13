@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siu Mai | Yummy Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">
+            <img src="./img/logo pink.png" class="logo">
+        </a>
+        <ul>
+            <li class="active"><a href="recipes.html">Recipes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="btn"><a href="login.html">Sign In</a></li>
+    </nav> 
+    <div>
+    <form action="" class="search-bar">
+        <input type="text" placeholder="Start searching..." name="q">
+        <button type="submit" class="search-btn">
+            <!-- Default Pink Icon -->
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#e25985" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+            </svg>
+            <!-- White Icon for Hover -->
+            <svg class="white-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="display: none;">
+                <path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+            </svg>
+        </button>
+    </form>
+    </div>
+    <div class="recipe-content">
+    <!-- Recipe Image -->
+    <div class="recipe-image-container">
+            <div class="image-wrapper">
+                <img src="./img/Siu Mai.jpg" alt="Siu Mai" class="recipe-img">
+                <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+            </div>
+        </div>
+        <!-- Text Content Container -->
+        <div class="recipe-text-container">
+            <h1>Siu Mai (燒賣)</h1>
+            <h2>Fillings are of course customizable to your likings.</h2>
+            <div class="recipe-tags">
+                <span class="tag">Catonese</span>
+                <span class="tag">Dim Sum</span>
+                <span class="tag">Dumplings</span>
+            </div>
+            <div class="recipe-meta">
+                <div class="meta-item">
+                    <i class="icon-clock"></i> 90 minutes
+                </div>
+                <div class="meta-item">
+                    <i class="icon-level"></i> Intermediate
+                </div>
+                <div class="meta-item">
+                    <i class="icon-servings"></i> 6 servings
+                </div>
+            </div>
+            <p class="recipe-introduction">
+                Siu mai also known as a pork and shrimp dumpling is a classic dim sum dish. The traditional way is to fill it with minced pork and shrimps.
+            </p>
+            <a href="#" class="print-link">Print Recipe</a>
+            <div class="nutrition-info">
+                <h3>Nutrition Per Serving:</h3>
+                <ul>
+                    <li>Calories: 250</li>
+                    <li>Fat: 12g</li>
+                    <li>Saturated Fat: 5g</li>
+                    <li>Sugar: 4g</li>
+                    <li>Protein: 8g</li>
+                    <li>Carbs: 28g</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- Ingredients and Steps Section -->
+<div class="recipe-steps">
+    <!-- Ingredients -->
+    <div class="ingredients-container">
+        <h2>Ingredients</h2>
+        <ul>
+            <li>250g Shrimp, peeled and deveined</li>
+            <li>150g Pork, ground</li>
+            <li>50g Water chestnuts, finely chopped</li>
+            <li>1 tsp Sesame oil</li>
+            <li>2 tbsp Soy sauce</li>
+            <li>1 tbsp Cornstarch</li>
+            <li>1 tbsp Oyster sauce</li>
+            <li>1 package Dumpling wrappers</li>
+            <li>Ginger, finely chopped</li>
+            <li>Green onions, chopped</li>
+        </ul>
+    </div>
+
+    <!-- Step-by-Step -->
+    <div class="steps-container">
+        <h2>Step-by-Step</h2>
+        <ol>
+            <li>Mix shrimp, pork, water chestnuts, sesame oil, soy sauce, cornstarch, oyster sauce, ginger, and green onions in a bowl.</li>
+            <li>Place a small spoonful of filling in the center of each dumpling wrapper.</li>
+            <li>Shape the dumplings by pleating the edges and pinching the top to seal.</li>
+            <li>Steam the dumplings for 10-12 minutes until cooked through.</li>
+            <li>Serve with soy sauce or dipping sauce of your choice.</li>
+        </ol>
+    </div>
+</div>
+    <!-- Footer -->
+    <div class="bento-container">
+        <img src="./img/" alt=" bottom" class="-bottom">
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="terms.html">Terms of Use</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookies</a>
+            <span>© 2025 Mush Rooms</span>
+        </div>
+    </footer>   
+</div>
+<script scr="script.js"></script>
+</body>
+</html>
