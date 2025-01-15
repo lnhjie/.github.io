@@ -424,7 +424,6 @@ nav ul li.btn.active a {
 
     .newsletter-form input,
     .newsletter-form button {
-        width: 100%; /* Ensure full width for each element */
         padding: 0.75rem; /* Adjust padding for smaller screens */
     }
 
@@ -594,58 +593,6 @@ nav ul li.btn.active a {
 .favorite-btn:hover {
     background: rgb(208, 79, 120);
     color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .popular h1 {
-        font-size: 28px; /* Adjust heading size for smaller screens */
-        text-align: center; /* Center-align text for better presentation */
-    }
-
-    .slider-container {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
-
-    .recipe-card {
-        width: 100%; /* Make recipe cards full width on mobile */
-        padding-right: 0; /* Remove padding to prevent horizontal overflow */
-        margin-bottom: 16px; /* Add space between cards */
-    }
-
-    .recipe-card img {
-        height: auto; /* Adjust height to fit proportionally */
-    }
-
-    .recipe-title {
-        font-size: 20px; /* Reduce font size for mobile */
-        text-align: center; /* Center-align titles for better readability */
-    }
-
-    .recipe-duration,
-    .recipe-tags {
-        text-align: center; /* Center-align additional details */
-        font-size: 14px; /* Adjust font size */
-    }
-
-    .tag {
-        font-size: 12px; /* Reduce tag size for mobile */
-        padding: 6px 12px; /* Adjust padding for smaller screens */
-        margin: 4px; /* Adjust spacing between tags */
-    }
-
-    .image-container {
-        width: 100%; /* Full width for images */
-        height: auto; /* Adjust height to fit proportionally */
-    }
-
-    .favorite-btn {
-        width: 40px; /* Reduce size for mobile */
-        height: 40px; 
-        font-size: 14px; 
-    }
 }
 
 /* Editor's Pick of the Day Card ----------------------------------------------------------------------------------------------*/ 
@@ -1209,11 +1156,19 @@ nav ul li.btn.active a {
     .recipe-content {
         flex-direction: column; /* Stack the content vertically */
         padding: 2rem; /* Adjust padding for smaller screens */
+        width: 100%; /* Full width on mobile */
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
     }
 
     .recipe-image-container,
     .recipe-text-container {
         flex: 1 1 100%; /* Ensure each section takes full width on mobile */
+        width: 100%;
     }
 
     .recipe-text-container {
