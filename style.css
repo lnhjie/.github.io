@@ -208,7 +208,7 @@ nav ul li.btn.active a {
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
-    margin: 4rem auto;
+    margin: 9rem auto;
     margin-bottom: 8rem;
     overflow: hidden;
 }
@@ -325,7 +325,55 @@ nav ul li.btn.active a {
     transform: scale(1.1);
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .newsletter-card {
+        flex-direction: column; /* Stack the image and content vertically */
+        gap: 1rem; /* Reduce the gap for smaller screens */
+        margin: 6rem auto; /* Adjust margin for better spacing */
+    }
+
+    .image-section, 
+    .content-section {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Stack the input and button vertically */
+        width: 100%; /* Full width on mobile */
+        gap: 1rem;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%; /* Ensure full width for each element */
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem; /* Slightly smaller heading for mobile */
+    }
+
+    .content-section p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .social-links ul {
+        justify-content: center; /* Center social links on mobile */
+    }
+
+    .social-links ul li a {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem; /* Adjust size of social icons for mobile */
+    }
+}
+
 /* Recipe Card ----------------------------------------------------------------------------------------------*/ 
+.popular {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .popular h1 {
     font-family: 'Regio Mono', monospace;
     font-size: 40px;
@@ -423,10 +471,10 @@ nav ul li.btn.active a {
 
 .image-container {
     border-radius: 16px;
-    position: relative; /* Enables positioning within this container */
-    width: 290px; /* Example width for the container */
-    height: 400px; /* Example height for the container */
-    overflow: hidden; /* Ensures content stays inside the boundaries */
+    position: relative; 
+    width: 290px; 
+    height: 400px; 
+    overflow: hidden; 
 }
 
 .image-container:hover {
@@ -439,13 +487,13 @@ nav ul li.btn.active a {
     border-radius: 16px;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Keeps the image aspect ratio intact */
+    object-fit: cover; 
 }
 
 .favorite-btn {
     position: absolute; /* Positions the button relative to the container */
-    top: 8px; /* Distance from the top */
-    right: 8px; /* Distance from the right */
+    top: 8px; 
+    right: 8px; 
     background: #ffffff;
     color: rgb(208, 79, 120);
     border: none;
@@ -457,7 +505,7 @@ nav ul li.btn.active a {
     display: flex; 
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .favorite-btn:hover {
@@ -468,22 +516,24 @@ nav ul li.btn.active a {
 /* Editor's Pick of the Day Card ----------------------------------------------------------------------------------------------*/ 
 .editors-pick-card {
     display: flex;
-    justify-content: space-between; /* Ensures equal spacing between cards */
-    gap: 2rem; /* Adds spacing between the cards */
+    justify-content: space-between; 
+    gap: 2rem;
     width: 100%;
-    max-width: 1200px; /* Optional: Limits the total width of the cards */
-    margin: 8rem auto;
+    max-width: 1200px; 
+    margin: 10rem auto;
+    margin-bottom: 12rem;
+    flex-wrap: wrap;
 }
 
 .editors-pick-img, 
-.editors-pick-content { /* Apply the same styling to both sections */
+.editors-pick-content {
     flex: 1; /* Ensures both sections take equal width */
     max-width: calc(50% - 1rem); /* Makes the width of each half minus the gap */
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem; /* Adds padding inside the sections */
+    padding: 1rem; 
 }
 
 .recipe-card-large {
@@ -588,6 +638,43 @@ nav ul li.btn.active a {
     font-size: 1.2rem;
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .editors-pick-card {
+        flex-direction: column; /* Stack the sections vertically */
+        gap: 1rem; /* Reduce the gap for smaller screens */
+        margin: 6rem auto; /* Adjust margin for better spacing */
+    }
+
+    .editors-pick-img, 
+    .editors-pick-content {
+        max-width: 100%; /* Full width on mobile */
+        padding: 1rem;
+    }
+
+    .recipe-card-large .image-container {
+        height: 300px; /* Adjust image height for smaller screens */
+    }
+
+    .description-section {
+        max-width: 100%; /* Full width for description */
+        text-align: center; /* Center-align text for better readability */
+    }
+
+    .description-section .editors-title {
+        font-size: 32px; /* Slightly smaller title */
+    }
+
+    .description-section .recipe-description {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .description-section .cta-button {
+        font-size: 0.9rem; /* Adjust button size */
+        padding: 0.8rem 1.5rem; /* Smaller padding for buttons */
+    }
+}
+
 /* Recipes Page ----------------------------------------------------------------------------------------------*/
 .recipes-header {
     border-radius: 24px;
@@ -675,6 +762,51 @@ nav ul li.btn.active a {
     background-color: rgb(208, 79, 120);
 }
 
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    /* Adjust the header text size */
+    .recipes-header h1 {
+        font-size: 36px;
+    }
+    .recipes-header h2 {
+        font-size: 20px;
+    }
+
+    /* Recipe Rows */
+    .recipe-row {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 16px;
+    }
+
+    /* Recipe Card Adjustments */
+    .recipe-card {
+        margin: 0 auto;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .recipe-details h2 {
+        font-size: 1.2rem;
+    }
+
+    .recipe-tags .tag {
+        font-size: 0.9rem;
+    }
+
+    /* Progress Bar and View More Button */
+    .progress-bar {
+        width: 90%;
+    }
+
+    .view-more-btn {
+        font-size: 16px;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
 /* Siu Mai Page ----------------------------------------------------------------------------------------------*/
 .recipe-content {
     display: flex;
@@ -682,7 +814,8 @@ nav ul li.btn.active a {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 4rem;
+    padding-top: 5rem;
 }
 
 .recipe-image-container,
@@ -736,73 +869,91 @@ nav ul li.btn.active a {
 }
 
 .recipe-text-container {
+    font-family: 'Lucida Sans', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: left;
 }
 
 .recipe-text-container h1 {
-    font-size: 2rem;
+    font-family: 'Regio Mono', monospace;
+    font-size: 3rem;
     color: rgb(226, 89, 133);
+    margin: 0;
 }
 
 .recipe-text-container h2 {
-    font-size: 16px;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 18px;
     font-weight: 400;
-    color: #555;
+    color: #666;
 }
 
 .recipe-tags {
-    margin-top: 16px;
+    margin: 2rem;
     display: flex;
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
 .tag {
     background: transparent;
     color: rgb(226, 89, 133);
-    padding: 0.5rem 0.9rem;
+    padding: 0.5rem 1.5em;
     border: 1px solid rgb(226, 89, 133);
     border-radius: 24px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .recipe-meta {
+    font-family: 'Regio Mono', monospace;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
+    margin: 0.5rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .meta-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     font-size: 1rem;
-    color: rgb(46, 46, 46);
+    color: rgb(226, 89, 133);
 }
 
-.icon-clock,
-.icon-level,
-.icon-servings {
-    width: 20px;
-    height: 20px;
-    background-color: rgb(208, 79, 120);
-    border-radius: 50%;
-    display: inline-block;
+.icon{
+    width: 40px;
+    height: 40px;
 }
 
 .recipe-introduction {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    padding: 8px;
+    font-family: 'Lucida Sans', sans-serif;
+    margin-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
     font-size: 18px;
-    color: #555;
+    color: #666;
+    line-height: 1.4;
+}
+
+.recipe-introduction h3 {
+    font-family: 'Regio Mono', monospace;
+    color: rgb(226, 89, 133);
+    margin-bottom: 1rem;
 }
 
 .print-link {
+    font-family: 'Regio Mono', monospace;
     color: rgb(208, 79, 120);
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    padding-left: 48px;
 }
 
 .print-link:hover {
@@ -810,11 +961,12 @@ nav ul li.btn.active a {
 }
 
 .nutrition-info {
-    padding: 1rem;
-    border-radius: 16px;
+    font-family: 'Regio Mono', monospace;
+    padding: 24px;
 }
 
 .nutrition-info h3 {
+    color: rgb(226, 89, 133);
     margin-bottom: 1rem;
 }
 
@@ -824,21 +976,39 @@ nav ul li.btn.active a {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 8px;
 }
 
 .nutrition-info li {
-    flex: 1 1 calc(33.33% - 1rem);
-    background: rgb(226, 89, 133);
+    flex: 1 1 calc(50% - 1rem); /* 4x2 layout */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left; 
+}
+
+.nutrition-info .circle {
+    width: 96px;
+    height: 40px;
+    background-color: rgb(226, 89, 133); /* Pink background */
     color: #fff;
-    padding: 0.5rem;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 0.9rem;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.nutrition-info .title {
+    background: transparent;
+    color: rgb(226, 89, 133);
+    font-weight: 500;
+    font-size: 16px;
 }
 
 /* New Layout for Ingredients and Steps */
 .recipe-steps {
+    font-family: 'Lucida Sans', sans-serif;
     display: flex;
     gap: 2rem;
     max-width: 1200px;
@@ -853,6 +1023,7 @@ nav ul li.btn.active a {
 
 .ingredients-container h2,
 .steps-container h2 {
+    font-family: 'Regio Mono', monospace;
     font-size: 1.5rem;
     color: rgb(46, 46, 46);
     margin-bottom: 1rem;
@@ -892,6 +1063,7 @@ nav ul li.btn.active a {
 }
 
 .about p {
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 18px;
     line-height: 1.3;
     margin-bottom: 1rem;
@@ -899,6 +1071,7 @@ nav ul li.btn.active a {
 }
 
 .about ul {
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 18px;
     margin-left: 0;
     color: #555555;
