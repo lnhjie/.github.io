@@ -20,13 +20,13 @@
     font-weight: 100;
     font-style: normal;
 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     src:
         url('./font/LucidaSans-Regular.ttf') format('ttf');
 }
 
 body {
-    font-family: 'Regio Mono Regular';
+    font-family: 'Regio Mono', monospace;
     margin: 0;
     padding: 0;
 }
@@ -48,6 +48,7 @@ nav {
 }
 
 nav ul {
+    font-family: 'Regio Mono', monospace;
     list-style: none;
     display: inline-block;
     text-align: left;
@@ -116,7 +117,7 @@ nav ul li.btn.active a {
 }
 
 .search-bar input {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-size: medium;
     flex: 1;
     border: 0;
@@ -129,7 +130,7 @@ nav ul li.btn.active a {
 
 ::placeholder {
     color: #bbbaba;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-size: medium;
 }
 
@@ -159,14 +160,14 @@ nav ul li.btn.active a {
 
 /* Hero ----------------------------------------------------------------------------------------------*/ 
 .content {
-    font-family: re;
+    font-family: 'Regio Mono', monospace;
     margin-top: 104px;
     margin-bottom: 20vh;
     color: rgb(208, 79, 120);
 }
 
 .content h1 {
-    font-family: 'Regio Mono Regular';
+    font-family: 'Regio Mono', monospace;
     font-size: 70px;
     font-weight: 400;
     line-height: 85px;
@@ -174,7 +175,7 @@ nav ul li.btn.active a {
 }
 
 .content h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 30px;
@@ -240,6 +241,7 @@ nav ul li.btn.active a {
 }
 
 .content-section h2 {
+    font-family: 'Regio Mono', monospace;
     font-size: 1.8rem;
     color: #fff;
     margin: 0;
@@ -269,7 +271,7 @@ nav ul li.btn.active a {
     border: 2px solid rgb(226, 89, 133);
     border-radius: 24px;
     font-size: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
 }
 
 .newsletter-form input::placeholder {
@@ -325,6 +327,7 @@ nav ul li.btn.active a {
 
 /* Recipe Card ----------------------------------------------------------------------------------------------*/ 
 .popular h1 {
+    font-family: 'Regio Mono', monospace;
     font-size: 40px;
     color:rgb(208, 79, 120);
 }
@@ -357,7 +360,7 @@ nav ul li.btn.active a {
     color: inherit;
     flex-direction: column;
     width: 290px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     background: transparent;
     padding-right: 16px;
     border-radius: 16px;
@@ -384,7 +387,7 @@ nav ul li.btn.active a {
 }
 
 .recipe-title {
-    font-family: regio mono;
+    font-family: 'Regio Mono', monospace;
     font-weight: 600;
     font-size: 28px;
     margin: 0 0 8px;
@@ -396,7 +399,7 @@ nav ul li.btn.active a {
 }
 
 .recipe-duration {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 16px;
     color: #666;
     margin-bottom: 16px;
@@ -411,7 +414,7 @@ nav ul li.btn.active a {
     background: #ffffff83;
     border: 1px solid rgb(208, 79, 120);
     color: rgb(208, 79, 120);
-    font-family: regio mono;
+    font-family: 'Regio Mono', monospace;
     font-size: 14px;
     padding: 8px 16px;
     margin: 0 8px 8px 0;
@@ -981,7 +984,7 @@ nav ul li.btn.active a {
     margin-bottom: 40px;
     font-size: 13px;
     color: #666;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
 }
 
 .contact-form {
@@ -1002,7 +1005,7 @@ nav ul li.btn.active a {
     padding: 0.75rem;
     border: 0.5px solid rgb(226, 89, 133);
     border-radius: 16px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 16px;
 }
 
@@ -1106,7 +1109,7 @@ nav ul li.btn.active a {
     border-radius: 16px;
     font-size: 16px;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
 }
 
 .sign-in-btn {
@@ -1141,7 +1144,7 @@ nav ul li.btn.active a {
 }
 
 .form-legal {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 13px;
     margin-top: 1rem;
 }
@@ -1152,7 +1155,7 @@ nav ul li.btn.active a {
     background-color:rgba(208, 79, 120, 0); 
     text-align: center; 
     padding: 80px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 14px; 
     border-top: 1px solid rgba(208, 79, 120, 0.238);
 }
