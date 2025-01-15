@@ -112,7 +112,7 @@ nav ul li.btn.active a {
         padding: 16px; /* Increase padding for better spacing on mobile */
         flex-direction: column; /* Stack the nav items vertically */
         align-items: center; /* Center align the items */
-        gap: 1rem; /* Add gap between items */
+        gap: 1.5rem; /* Add gap between items */
     }
 
     .logo {
@@ -125,7 +125,7 @@ nav ul li.btn.active a {
         flex-direction: column; /* Stack nav items vertically */
         align-items: center; /* Center align nav items */
         padding-left: 0; /* Remove padding */
-        gap: 1rem; /* Add space between list items */
+        gap: 1.5rem; /* Add space between list items */
     }
 
     nav ul li {
@@ -403,12 +403,14 @@ nav ul li.btn.active a {
         flex-direction: column; /* Stack the image and content vertically */
         gap: 1rem; /* Reduce the gap for smaller screens */
         margin: 4rem auto; /* Adjust margin for better spacing */
+        overflow-x: hidden;
     }
 
     .image-section, 
     .content-section {
         max-width: 100%; /* Full width on mobile */
         width: 100%; /* Full width on mobile */
+        box-sizing: border-box; /* Ensure padding is included in width */
     }
     .content-section {
         padding: 1.5rem; /* Adjust padding for smaller screens */
@@ -592,6 +594,58 @@ nav ul li.btn.active a {
 .favorite-btn:hover {
     background: rgb(208, 79, 120);
     color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+        text-align: center; /* Center-align text for better presentation */
+    }
+
+    .slider-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .recipe-card {
+        width: 100%; /* Make recipe cards full width on mobile */
+        padding-right: 0; /* Remove padding to prevent horizontal overflow */
+        margin-bottom: 16px; /* Add space between cards */
+    }
+
+    .recipe-card img {
+        height: auto; /* Adjust height to fit proportionally */
+    }
+
+    .recipe-title {
+        font-size: 20px; /* Reduce font size for mobile */
+        text-align: center; /* Center-align titles for better readability */
+    }
+
+    .recipe-duration,
+    .recipe-tags {
+        text-align: center; /* Center-align additional details */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .tag {
+        font-size: 12px; /* Reduce tag size for mobile */
+        padding: 6px 12px; /* Adjust padding for smaller screens */
+        margin: 4px; /* Adjust spacing between tags */
+    }
+
+    .image-container {
+        width: 100%; /* Full width for images */
+        height: auto; /* Adjust height to fit proportionally */
+    }
+
+    .favorite-btn {
+        width: 40px; /* Reduce size for mobile */
+        height: 40px; 
+        font-size: 14px; 
+    }
 }
 
 /* Editor's Pick of the Day Card ----------------------------------------------------------------------------------------------*/ 
@@ -1151,6 +1205,59 @@ nav ul li.btn.active a {
     color: rgb(226, 89, 133); 
 }
 
+@media (max-width: 768px) {
+    .recipe-content {
+        flex-direction: column; /* Stack the content vertically */
+        padding: 2rem; /* Adjust padding for smaller screens */
+    }
+
+    .recipe-image-container,
+    .recipe-text-container {
+        flex: 1 1 100%; /* Ensure each section takes full width on mobile */
+    }
+
+    .recipe-text-container {
+        text-align: center; /* Center-align text for mobile */
+        padding: 1rem; /* Add padding for better spacing */
+    }
+
+    .recipe-text-container h1 {
+        font-size: 2rem; /* Reduce heading size for mobile */
+    }
+
+    .recipe-meta {
+        flex-direction: column; /* Stack meta items vertically */
+        gap: 1.5rem; /* Reduce gap between items */
+    }
+
+    .meta-item {
+        font-size: 0.9rem; /* Reduce font size of meta items */
+    }
+
+    .recipe-introduction {
+        padding: 1rem; /* Reduce padding for mobile */
+        font-size: 16px; /* Adjust font size for readability */
+    }
+
+    .recipe-steps {
+        flex-direction: column; /* Stack steps and ingredients vertically */
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .ingredients-container,
+    .steps-container {
+        flex: 1 1 100%; /* Ensure full width for each section */
+    }
+
+    .nutrition-info ul {
+        gap: 16px; /* Increase gap for better spacing */
+    }
+
+    .nutrition-info li {
+        flex: 1 1 100%; /* Make each item take full width */
+    }
+}
+
 /* About Page ----------------------------------------------------------------------------------------------*/
 .about-container {
     max-width: 800px;
@@ -1437,6 +1544,8 @@ nav ul li.btn.active a {
         padding: 1rem; /* Reduced padding for mobile */
         margin: 1rem auto 4rem auto; /* Adjust margin for mobile */
         max-width: 100%; /* Ensure container width takes up the available space */
+        box-sizing: border-box;
+        width: 100%; /* Ensure container width takes up the available space */
     }
 
     .form-box h1 {
@@ -1461,11 +1570,13 @@ nav ul li.btn.active a {
         padding: 0.5rem; /* Reduce padding inside input fields */
         margin-bottom: 24px; /* Adjust margin between fields */
         font-size: 14px; /* Reduce font size in input fields */
+        width: 100%;
     }
 
     .sign-in-btn {
         padding: 0.75rem; /* Keep the button padding the same for mobile */
         font-size: 1rem; /* Keep font size the same */
+        width: 100%; /* Ensure button takes up full width */
     }
 
     .form-footer {
