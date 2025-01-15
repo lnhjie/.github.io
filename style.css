@@ -19,10 +19,14 @@
         url('./font/RegioMono-Bold.otf') format('otf'); 
     font-weight: 100;
     font-style: normal;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    src:
+        url('./font/LucidaSans-Regular.ttf') format('ttf');
 }
 
 body {
-    font-family: Regio Mono;
+    font-family: 'Regio Mono Regular';
     margin: 0;
     padding: 0;
 }
@@ -155,12 +159,14 @@ nav ul li.btn.active a {
 
 /* Hero ----------------------------------------------------------------------------------------------*/ 
 .content {
+    font-family: re;
     margin-top: 104px;
     margin-bottom: 20vh;
     color: rgb(208, 79, 120);
 }
 
 .content h1 {
+    font-family: 'Regio Mono Regular';
     font-size: 70px;
     font-weight: 400;
     line-height: 85px;
