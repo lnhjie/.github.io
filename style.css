@@ -1155,7 +1155,9 @@ nav ul li.btn.active a {
 @media (max-width: 768px) {
     .recipe-content {
         flex-direction: column; /* Stack the content vertically */
-        padding: 2rem; /* Adjust padding for smaller screens */
+        padding: 0;
+        padding-top: 2rem;
+        margin: 0;
         width: 100%; /* Full width on mobile */
         overflow-x: hidden;
         box-sizing: border-box;
@@ -1173,11 +1175,23 @@ nav ul li.btn.active a {
 
     .recipe-text-container {
         text-align: center; /* Center-align text for mobile */
-        padding: 1rem; /* Add padding for better spacing */
     }
 
     .recipe-text-container h1 {
         font-size: 2rem; /* Reduce heading size for mobile */
+    }
+
+    .recipe-text-container .recipe-tags {
+        flex-wrap: wrap; /* Allow tags to wrap within the container */
+        gap: 1rem; /* Reduce gap between tags */
+        justify-content: center; /* Center-align tags for better layout */
+        margin: 1rem auto; /* Adjust margins for better spacing */
+    }
+
+    .recipe-text-container .tag {
+        font-size: 0.85rem; /* Reduce tag font size for smaller screens */
+        padding: 0.4rem 1rem; /* Adjust padding to fit within smaller screens */
+        white-space: nowrap; /* Prevent tags from wrapping text */
     }
 
     .recipe-meta {
